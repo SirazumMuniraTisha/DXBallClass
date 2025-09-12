@@ -10,6 +10,9 @@ TagManager:
   - sideWall
   - topWall
   - bottomWall
+  - logic
+  - ScoreText
+  - WinText
   layers:
   - Default
   - TransparentFX
