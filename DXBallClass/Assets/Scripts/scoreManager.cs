@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class scoreManager : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class scoreManager : MonoBehaviour
             {
                 winText.text = "You Win!";
                 ball.SetActive(false);
+                SceneManager.LoadScene("Level2");
 
             }
 
