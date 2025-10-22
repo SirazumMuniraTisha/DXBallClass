@@ -13,6 +13,8 @@ TagManager:
   - logic
   - ScoreText
   - WinText
+  - music
+  - stone
   layers:
   - Default
   - TransparentFX
