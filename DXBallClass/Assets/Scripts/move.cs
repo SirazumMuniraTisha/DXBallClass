@@ -8,32 +8,47 @@ public class move : MonoBehaviour
 
     public Animator animator;
 
+    SoundManager soundManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         pad = GetComponent<Rigidbody2D>();
         initial = pad.transform.localPosition;
+        soundManager = GameObject.FindGameObjectWithTag("music").GetComponent<SoundManager>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKey(KeyCode.RightArrow))){
+        if ((Input.GetKey(KeyCode.RightArrow)))
+        {
 
             animator.SetBool("isRunning", true);
-            if (initial.x<=9.75)
-                initial.x=initial.x+displacement;
-            }
-        else if((Input.GetKey(KeyCode.LeftArrow))){
-            if (initial.x>-9.75)
-                initial.x=initial.x-displacement;
-            }
-        else{
+            if (initial.x <= 9.75)
+                initial.x = initial.x + displacement;
+        }
+        else if ((Input.GetKey(KeyCode.LeftArrow)))
+        {
+            if (initial.x > -9.75)
+                initial.x = initial.x - displacement;
+        }
+        else
+        {
             animator.SetBool("isRunning", false);
-        }        
-        
+        }
+
         pad.MovePosition(initial);
+    }
+    
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("brick"))
+        {   Debug.Log("Stumble Sound");
+            soundManager.PlaySXF(soundManager.stumbleSound);
+        }
+        
     }
 
 }

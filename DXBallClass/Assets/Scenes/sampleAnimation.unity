@@ -149,7 +149,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.19
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -776,7 +776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   musicSource: {fileID: 227400290}
   sfxSource: {fileID: 636043841}
-  backgroundMusic: {fileID: 8300000, guid: 6a5c99ce84445824cb34c5e2a8d1f7c5, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 24577dbe82babd344b70991369593b35, type: 3}
   stumbleSound: {fileID: 8300000, guid: 9bd44ab111af7da4ebe4c69a832e7532, type: 3}
 --- !u!4 &1548169371
 Transform:
